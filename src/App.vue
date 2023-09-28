@@ -68,13 +68,15 @@
     width: 100%;
     height: 20%;
 
+    margin: 10px 0 20px 0;
+
     font-size: 48px;
     text-align: center;
     border-bottom: 1px solid white;
   }
 
   &__body {
-    width: 80%;
+    width: calc(80% - 30px);
     display: flex;
     flex-direction: column;
 
@@ -117,10 +119,10 @@
 
 @media (max-width: 1100px) {
   .wrapper {
-    padding: 0 100px;
     padding: 0 10%;
 
     .item {
+      font-size: 18px;
       &:not(:last-child) {
         margin-bottom: 10px;
       }
