@@ -28,9 +28,29 @@
           <span class="item__text">Citibank N.A., New York, USA;</span>
           <span class="item__title">SWIFT</span>
           <span class="item__text">CITIUS33</span>
-
+        </section>
+        <section class="item whited">
           <span class="item__title">Director</span>
           <span class="item__text">Davit Shishmanashvili</span>
+        </section>
+        <section class="item">
+          <span class="item__title"
+            >Types of activities according to the National Classifier of Types
+            of Activities of Georgia:</span
+          >
+          <section class="grid">
+            <span>62.01</span>
+            <span
+              >კომპიუტერული დაპროგრამების საქმიანობები (Software
+              development)</span
+            >
+            <span>62.09</span>
+            <span
+              >საინფორმაციო ტექნოლოგიების და კომპიუტერული მომსახურების სხვა
+              საქმიანობები (Other types of activities in the field of
+              information technology and computer services)</span
+            >
+          </section>
         </section>
       </section>
     </section>
@@ -44,14 +64,14 @@
   justify-content: center;
 
   height: 100%;
-  padding: 0 20%;
+  padding: 0 10%;
 
   font-size: 16px;
   background-color: white;
 
   color: #1e2f51;
   font-family: Lexend;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .card {
@@ -91,11 +111,12 @@
     display: flex;
     flex-direction: column;
 
-    padding: 5% 10%;
+    padding: 3% 10%;
 
     font-size: 20px;
 
     &__title {
+      font-weight: 500;
       color: #6b6b6b;
     }
 
@@ -104,6 +125,15 @@
 
       &:not(:last-child) {
         margin-bottom: 25px;
+      }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 10% 1fr;
+      padding-top: 10px;
+      span {
+        height: fit-content;
       }
     }
   }
@@ -119,12 +149,15 @@
 
 @media (max-width: 1100px) {
   .wrapper {
-    padding: 0 10%;
+    padding: 0 5%;
 
     .item {
       font-size: 18px;
       &:not(:last-child) {
         margin-bottom: 10px;
+      }
+      .grid {
+        grid-template-columns: 15% 1fr;
       }
     }
   }
@@ -136,6 +169,12 @@
 
     .card__header {
       font-size: 40px;
+    }
+
+    .item {
+      .grid {
+        grid-template-columns: 20% 1fr;
+      }
     }
   }
 }
