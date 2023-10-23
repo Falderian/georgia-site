@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Section from "../../../HOC/Section";
 
-const contact = () => {
-  const openEmailClient = () => {
+export const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const openEmailClient = (event) => {
+    event.preventDefault();
     window.open(
-      "https://mail.google.com/mail/u/0/?fs=1&to=payotak@gmail.com&bcc=payotak@gmail.com&tf=cm"
+      `https://mail.google.com/mail/?view=cm&fs=1&to=payotak@gmail.com&su="Alletanium LLC"&body=${message}&bcc=${email}`
     );
   };
   return (
@@ -27,6 +30,7 @@ const contact = () => {
               <form>
                 <div className="form-group">
                   <input
+                    id="name"
                     type="text"
                     className="form-control rounded-0"
                     aria-describedby="emailHelp"
@@ -35,6 +39,8 @@ const contact = () => {
                 </div>
                 <div className="form-group">
                   <input
+                    onInput={(e) => setEmail(e.target.value)}
+                    id="email"
                     type="email"
                     className="form-control rounded-0"
                     aria-describedby="emailHelp"
@@ -43,6 +49,8 @@ const contact = () => {
                 </div>
                 <div className="form-group">
                   <textarea
+                    onInput={(e) => setMessage(e.target.value)}
+                    id="message"
                     className="form-control rounded-0"
                     rows="5"
                     placeholder="Enter Message..."
@@ -64,5 +72,3 @@ const contact = () => {
     </Section>
   );
 };
-
-export default contact;
