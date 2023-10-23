@@ -41,7 +41,6 @@ const about = () => {
                   You don’t need to look for individual specialists, since we
                   take care of the entire development - from design to launch.
                 </p>
-                <button className="btn btn-primary rounded-0">Read More</button>
               </div>
             </div>
           </div>
