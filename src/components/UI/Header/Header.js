@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import Nav from '../Nav/Nav';
-import TopBar from '../TopBar/TopBar';
+import Nav from "../Nav/Nav";
+import TopBar from "../TopBar/TopBar";
 
 const header = () => {
   return (
-    <div className='header'>
+    <div className="header">
       <TopBar />
       <Nav />
     </div>

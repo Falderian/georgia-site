@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import Link from '../Link/Link';
+import Link from "../Link/Link";
 
 const Nav = () => {
-  const [navClass, setNavClass] = useState('');
+  const [navClass, setNavClass] = useState("");
   const [toggeledNav, settoggeledNav] = useState(false);
 
   const toggleNav = () => {
@@ -11,25 +11,25 @@ const Nav = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      let navClass = '';
+    window.addEventListener("scroll", () => {
+      let navClass = "";
       if (window.scrollY >= 200) {
-        navClass = 'scrolled';
+        navClass = "scrolled";
       }
       setNavClass(navClass);
     });
   }, []);
   return (
     <nav className={`navbar navbar-expand-md bg-light ${navClass}`}>
-      <div className='container'>
-        <a className='navbar-brand' href='!#'>
-          <span>Root</span>
-          <i className='fas fa-circle ml-1' />
+      <div className="container">
+        <a className="navbar-brand" href="!#">
+          <span>Alletanium LLC</span>
+          <i className="fas fa-circle ml-1" />
         </a>
         <div
           className={`navbar-toggler nav-icon ${(() => {
-            if (toggeledNav) return 'open';
-            return '';
+            if (toggeledNav) return "open";
+            return "";
           })()}`}
           onClick={toggleNav}
         >
@@ -40,33 +40,33 @@ const Nav = () => {
 
         <div
           className={`collapse navbar-collapse ${(() => {
-            if (toggeledNav) return 'show';
-            return '';
+            if (toggeledNav) return "show";
+            return "";
           })()}`}
         >
-          <ul className='navbar-nav ml-auto'>
-            <li className='nav-item'>
-              <Link target='home' offset={-120} classes='nav-link'>
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <Link target="home" offset={-120} classes="nav-link">
                 Home
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link target='about' classes='nav-link'>
+            <li className="nav-item">
+              <Link target="about" classes="nav-link">
                 About
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link target='services' classes='nav-link'>
+            <li className="nav-item">
+              <Link target="services" classes="nav-link">
                 Services
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link target='blog' classes='nav-link'>
+            <li className="nav-item">
+              <Link target="blog" classes="nav-link">
                 Blog
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link target='contact' classes='nav-link'>
+            <li className="nav-item">
+              <Link target="contact" classes="nav-link">
                 Contact
               </Link>
             </li>
