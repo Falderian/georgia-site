@@ -19,6 +19,10 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 body {
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  p,
+  h6 {
+    font-size: 1rem;
+  }
 }
 .section-header {
   .section-title {
@@ -45,6 +49,6 @@ body {
   }
   .section-subtitle {
     color: #6f6f6f;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
