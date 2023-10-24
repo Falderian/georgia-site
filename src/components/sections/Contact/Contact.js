@@ -6,7 +6,7 @@ export const Contact = () => {
   const openEmailClient = (event) => {
     event.preventDefault();
     window.open(
-      `https://mail.google.com/mail/?view=cm&fs=1&to=payotak@gmail.com&su="Alletanium LLC"`
+      `https://mail.google.com/mail/?view=cm&fs=1&to=payotak@gmail.com&su="Aletaniumium LLC"`
     );
   };
   return (
