@@ -23,7 +23,7 @@ const Nav = () => {
     <nav className={`navbar navbar-expand-md bg-light ${navClass}`}>
       <div className="container">
         <a className="navbar-brand" href="!#">
-          <span>Aletaniumium LLC</span>
+          <span>Aletanium LLC</span>
           <i className="fas fa-circle ml-1" />
         </a>
         <div
