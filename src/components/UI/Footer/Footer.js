@@ -65,7 +65,7 @@ const footer = () => {
         </div>
       </div>
       <div className="bottom-footer pt-3 pb-3 text-center">
-        <small>© All Right Reserved. Alletanium LLC</small>
+        <small>© All Right Reserved. Aletaniumium LLC</small>
       </div>
     </footer>
   );
